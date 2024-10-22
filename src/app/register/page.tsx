@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react';
 import axios from 'axios';
+import "../globals.css"
 
 const Register = () => {
   const [username, setUsername] = useState('');
@@ -18,12 +19,12 @@ const Register = () => {
       setMessage('User registered successfully');
     } catch (error) {
       console.error('Registration error:', error);
-      setMessage('Registration failed');
+      alert('Registration failed');
     }
   };
 
   return (
-    <div>
+    <div className='container'>
       <h1>Register</h1>
       <form onSubmit={handleRegister}>
         <div>

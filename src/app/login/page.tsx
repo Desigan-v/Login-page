@@ -3,7 +3,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
 import Cookies from 'js-cookie'; // Import js-cookie
-
+import "../globals.css"
 export default function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -28,12 +28,12 @@ export default function Login() {
       }
     } catch (error) {
       console.error('Login error:', error);
-      setMessage('Invalid username or password: ' + error);
+      alert('Invalid username or password');
     }
   };
 
   return (
-    <div>
+    <div className='container'>
       <h1>Login</h1>
       <form onSubmit={handleSubmit}>
         <div>

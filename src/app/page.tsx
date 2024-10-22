@@ -1,9 +1,11 @@
 import Link from 'next/link';
 import "./globals.css";
 const Home = () => (
-    <div>
-        <h1>Welcome to Next.js Authentication</h1>
-        <div>
+    <div className='container'>
+        <center><h1>Welcome</h1></center>
+        <div className='content'>
+        <div className='button-container'>
+          <div>
             <Link href="/login">
                 <button>Login</button>
             </Link>
@@ -13,7 +15,8 @@ const Home = () => (
                 <button>Register</button>
             </Link>
         </div>
-    </div>
+        </div>
+    </div></div>
 );
 
 export default Home;
