@@ -1,151 +1,82 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #1c1c1c, #444);
-    color: #fff;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .container {
-    width: 100%;
-    margin: 0 auto;
-    padding: 40px;
-    background: rgba(0, 0, 0, 0.75);
-    border-radius: 15px;
-    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(15px);
-  }
-  h1 {
+@import '@fortawesome/fontawesome-free/css/all.css';
+
+/* Title styling */
+.title {
+    color: #00ff7f;
     font-size: 2.5rem;
-    color: #f5f5f5;
-    letter-spacing: 1.5px;
-    margin-bottom: 40px;
-    text-transform: uppercase;
-    background: linear-gradient(90deg, #ff416c, #ff4b2b);
-    -webkit-background-clip: text;
-    color: transparent;
-    font-family: 'Brush Script MT', cursive;
-  }
-  
-  .button-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-    gap: 15px;
-  }
-  
-  button {
-    background: linear-gradient(45deg, #ff416c, #ff4b2b);
-    color: #fff;
-    border: none;
-    padding: 15px 30px;
-    font-size: 1rem;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: all 0.4s ease;
-    box-shadow: 0px 5px 15px rgba(255, 65, 108, 0.4);
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-  }
-  
-  button:hover {
-    background: linear-gradient(45deg, #ff4b2b, #ff416c);
-    transform: scale(1.1);
-    box-shadow: 0px 10px 20px rgba(255, 65, 108, 0.6);
-  }
-  
-  .content {
-    padding: 20px;
-    justify-content: center;
+    margin-bottom: 30px;
+    font-family: cursive;
+
+}
+
+/*  list styling */
+.list {
+    list-style: none;
+    padding: 0;
+}
+
+/* Individual  item styling */
+.item {
+    position: relative;
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease-in-out;
-  }
-  
-  
-  
-  /*Responsives */
-  @media (max-width: 1024px) {
-    
-    .container {
-      padding: 30px;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for  items */
+.item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 255, 127, 0.5);
+}
+
+
+/*  description styling */
+.description {
+    font-size: 1.2rem;
+    color: #ddd;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* name styling */
+.name {
+    font-size: 1.1rem;
+    color: #ffa07a;
+    margin-bottom: 10px;
+}
+
+/* View article link styling */
+.view-link {
+  color: #ff4b2b;
+  font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.view-link:hover {
+    color: #ff2600;
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
     }
+
+    .item {
+        padding: 15px;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+}
+
   
-    .button {
-      padding: 10px 18px;
-      font-size: 1rem;
-    }
-  
-    h1 {
-      font-size: 2.5rem;
-    }
-  }
-  @media (max-width: 1800px) {
-    
-    .container {
-      padding: 30px;
-    }
-  
-    .button {
-      padding: 10px 18px;
-      font-size: 1rem;
-    }
-  
-    h1 {
-      font-size: 2.5rem;
-    }
-  }
-  
-  /* Mobile Devices */
-  @media (max-width: 600px) {
-    .container {
-      width: 95%;
-      padding: 20px;
-    }
-   
-  
-    .button-container {
-      flex-direction: column; 
-      gap: 10px;
-    }
-  
-    h1 {
-      font-size: 2rem;
-    }
-  
-    .button {
-      padding: 10px 15px;
-      font-size: 0.9rem;
-    }
-  
-    .content {
-      padding: 20px;
-    }
-  }
-  
-  /* Extra Small Devices */
-  @media (max-width: 400px) {
-    .container {
-      width: 95%;
-      padding: 20px;
-    }
-    
-    h1 {
-      font-size: 1.8rem;
-    }
-  
-    .button {
-      padding: 8px 12px;
-      font-size: 0.85rem;
-    }
-  }
