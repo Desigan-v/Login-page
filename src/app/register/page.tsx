@@ -6,7 +6,6 @@ import "../globals.css"
 const Register = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [message, setMessage] = useState('');
 
   const handleRegister = async (event) => {
     event.preventDefault();
@@ -16,7 +15,7 @@ const Register = () => {
         username,
         hashedPassword: password
       });
-      setMessage('User registered successfully');
+      alert('User registered successfully');
     } catch (error) {
       console.error('Registration error:', error);
       alert('Registration failed');
@@ -47,7 +46,6 @@ const Register = () => {
         </div>
         <button type="submit">Register</button>
       </form>
-      <p>{message}</p>
     </div>
   );
 };
